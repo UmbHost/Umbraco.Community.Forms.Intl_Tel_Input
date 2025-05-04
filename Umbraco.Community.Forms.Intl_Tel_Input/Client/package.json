@@ -1,0 +1,21 @@
+{
+  "name": "umbraco-community-forms-intl-tel-input",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "watch": "tsc && vite build --watch",
+    "build": "tsc && vite build",
+    "generate-client": "node scripts/generate-openapi.js https://localhost:5000/umbraco/swagger/umbracocommunityformsintltelinput/swagger.json"
+  },
+  "devDependencies": {
+    "@hey-api/client-fetch": "^0.8.3",
+    "@hey-api/openapi-ts": "^0.64.10",
+    "@umbraco-cms/backoffice": "^15.3.1",
+    "chalk": "^5.4.1",
+    "cross-env": "^7.0.3",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "Umbraco.Community.Forms.Intl_Tel_Input",
+  "name": "Umbraco.Community.Forms.Intl_Tel_Input",
+  "version": "5.0.0",
+  "allowTelemetry": true,
+  "extensions": [
+    {
+      "name": "Umbraco Community Forms Intl Tel Input Bundle",
+      "alias": "Umbraco.Community.Forms.Intl_Tel_Input.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/UmbracoCommunityFormsIntlTelInput/umbraco-community-forms-intl-tel-input.js"
+    }
+  ]
+}
