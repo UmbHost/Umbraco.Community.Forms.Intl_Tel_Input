@@ -85,10 +85,10 @@ jobs:
       # ------------------------
       # actual builds / packages 
       # ------------------------
-      - name: Restore Umbraco.Community.Forms.uCaptcha
+      - name: Restore Umbraco.Community.Forms.Intl_Tel_Input
         run: dotnet restore ./Umbraco.Community.Forms.Intl_Tel_Input/Umbraco.Community.Forms.Intl_Tel_Input.csproj
 
-      - name: Build Umbraco.Community.Forms.uCaptcha
+      - name: Build Umbraco.Community.Forms.Intl_Tel_Input
         run: dotnet pack ./Umbraco.Community.Forms.Intl_Tel_Input/Umbraco.Community.Forms.Intl_Tel_Input.csproj --no-restore -c ${{env.CONFIG}} --output ${{env.OUT_FOLDER}} /p:version=${{steps.gitversion.outputs.nuGetVersionV2}}
 
       - name: Push to GitHub Nuget Repo
