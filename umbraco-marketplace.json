@@ -1,0 +1,21 @@
+{
+    "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+
+    "AuthorDetails": {
+        "Description": "UmbHost is a provider of Umbraco hosting and development",
+        "Url": "https://umbhost.net",
+        "ImageUrl": "https://umbhost.net/media/4lgcknwi/umbhost-new-logo.png"
+    },
+    "Category": "Editor Tools",    
+    "IssueTrackerUrl": "https://github.com/UmbHost/Umbraco.Community.Forms.Intl_Tel_Input/issues",
+    "LicenseTypes": ["Free"],
+    "PackageType": "Package",
+    "Tags": [
+        "Intel-Tel-Input",
+        "Telephone",
+        "Telephone Input",
+        "International Telephone Input",
+        "Forms",
+        "Umbraco Forms"
+    ]
+}
