@@ -3,7 +3,7 @@ function ourUmbracoFormsIntlTelInput(fieldId, enableIPBasedCountry, initialCount
     var input = document.querySelector("#phone_intl_t" + fieldId);
 
     var intlTelInputOptions = {};
-
+    intlTelInputOptions.dropdownContainer = document.body;
     intlTelInputOptions.initialCountry = initialCountry;
     intlTelInputOptions.utilsScript = "/App_Plugins/UmbracoCommunityFormsIntlTelInput/js/utils.js";
 
