@@ -111,9 +111,9 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
                     }
                 }
             }
-            return $"ourUmbracoFormsIntlTelInput('t{field.Id.ToString("N")}'," +
+            return $"ourUmbracoFormsIntlTelInput('t{field.Id:N}'," +
                    $"{ipBasedCountry.ToString().ToLower()}," +
-                   $"'{initialCountry.ToUpper()}'," +
+                   $"'{initialCountry?.ToUpper()}'," +
                    $"{autoPlaceholder.ToString().ToLower()}," +
                    $"'{ipInfoKey}'," +
                    $"'{placeholderType}'," +
@@ -148,6 +148,17 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
             javascriptFiles.Add($"{Constants.PluginScriptRoot}/validate.phonenumber.js");
 
             return javascriptFiles;
+        }
+
+        public override List<Exception> ValidateSettings()
+        {
+            var errors = new List<Exception>();
+            if ((string.IsNullOrEmpty(InitialCountry) || string.IsNullOrWhiteSpace(InitialCountry)) && string.Equals(IPBasedCountry, "false", StringComparison.InvariantCultureIgnoreCase))
+            {
+                errors.Add(new Exception("Please enter a value for Initial Country"));
+            }
+
+            return errors.Count > 0 ? errors : base.ValidateSettings();
         }
 
         public override IEnumerable<string> ValidateField(Form form, Field field, IEnumerable<object> postedValues, HttpContext context,
