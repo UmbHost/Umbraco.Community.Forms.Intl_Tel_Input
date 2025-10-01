@@ -39,13 +39,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="libphonenumber-csharp" Version="9.0.4" />
-		<PackageReference Include="Umbraco.Cms.Web.Website" Version="15.3.1" />
-		<PackageReference Include="Umbraco.Cms.Web.Common" Version="15.3.1" />
-		<PackageReference Include="Umbraco.Cms.Api.Common" Version="15.3.1" />
-		<PackageReference Include="Umbraco.Cms.Api.Management" Version="15.3.1" />
-		<PackageReference Include="Umbraco.Forms.Core" Version="15.1.1" />
-		<PackageReference Include="Umbraco.Forms.Web" Version="15.1.1" />
+		<PackageReference Include="libphonenumber-csharp" Version="9.0.15" />
+		<PackageReference Include="Umbraco.Cms.Web.Website" Version="16.2.0" />
+		<PackageReference Include="Umbraco.Cms.Web.Common" Version="16.2.0" />
+		<PackageReference Include="Umbraco.Cms.Api.Common" Version="16.2.0" />
+		<PackageReference Include="Umbraco.Cms.Api.Management" Version="16.2.0" />
+		<PackageReference Include="Umbraco.Forms.Core" Version="16.1.0" />
+		<PackageReference Include="Umbraco.Forms.Web" Version="16.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
