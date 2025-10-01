@@ -5,7 +5,7 @@ function ourUmbracoFormsIntlTelInput(fieldId, enableIPBasedCountry, initialCount
     var intlTelInputOptions = {};
 
     intlTelInputOptions.initialCountry = initialCountry;
-    intlTelInputOptions.utilsScript = "/App_Plugins/Our.Umbraco.Forms.IntlTelInput/js/utils.js";
+    intlTelInputOptions.utilsScript = "/App_Plugins/UmbracoCommunityFormsIntlTelInput/js/utils.js";
 
     if (enableIPBasedCountry) {
         intlTelInputOptions.geoIpLookup = function (success, failure) {
