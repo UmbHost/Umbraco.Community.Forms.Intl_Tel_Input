@@ -1,3 +1,4 @@
+@using Umbraco.Forms.Web
 @model Umbraco.Forms.Web.Models.FieldViewModel
 @{
     var invalidMessage = "Please enter a valid telephone number";
@@ -12,7 +13,7 @@
 
     var fieldId = "phone_intl_t" + Guid.Parse(Model.Id).ToString("N");
 }
-<input autocomplete="off" type="tel" name="@Model.Name" id="@fieldId" class="input--grey input--squared" value="@Model.ValueAsHtmlString" maxlength="500" data-val="true" data-val-validatephonenumber="@invalidMessage"
+<input autocomplete="off" type="tel" name="@Model.Name" id="@fieldId" class="text @Html.GetFormFieldClass(Model.FieldTypeName)" value="@Model.ValueAsHtmlString" maxlength="500" data-val="true" data-val-validatephonenumber="@invalidMessage"
        @{if (string.IsNullOrEmpty(Model.PlaceholderText) == false) { <text> placeholder="@Model.PlaceholderText" </text> }}
        @{if (Model.Mandatory) { <text> data-val-required="@Model.RequiredErrorMessage" </text> }}
        @{if (Model.Validate) { <text> data-val-regex="@Model.InvalidErrorMessage" data-regex="@Html.Raw(Model.Regex)"</text>}}>
