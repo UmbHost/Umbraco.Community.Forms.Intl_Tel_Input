@@ -26,8 +26,6 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
 
             FieldTypeViewName = "FieldType.Intl-Tel-Input.cshtml";
             PreviewView = "intlTelInput.Field.Preview";
-            MandatoryByDefault = true;
-            HideLabel = true;
         }
         [Setting("Validation message", Description = "The message shown when an incorrect telephone number is entered", View = "Umb.PropertyEditorUi.TextBox")]
         public string ValidationMessage { get; set; }
@@ -52,6 +50,13 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
 
         [Setting("Only countries", Description = "In the dropdown, display only the countries you specify in ISO2 format (Comma separated)", View = "Umb.PropertyEditorUi.TextBox")]
         public string OnlyCountries { get; set; }
+
+        [Setting("Show Label", Description = "Indicate whether the the field's label should be shown when rendering the form.", View = "Umb.PropertyEditorUi.Toggle", PreValues = "true", DisplayOrder = 30)]
+        public virtual string ShowLabel { get; set; }
+
+        public override bool HideLabel => this.ShowLabel == "False";
+
+        public override bool MandatoryByDefault => true;
 
         public override string RequiredJavascriptInitialization(Field field)
         {
@@ -111,7 +116,7 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
                     }
                 }
             }
-            return $"ourUmbracoFormsIntlTelInput('t{field.Id:N}'," +
+            return $"ourUmbracoFormsIntlTelInput('{field.Id}'," +
                    $"{ipBasedCountry.ToString().ToLower()}," +
                    $"'{initialCountry?.ToUpper()}'," +
                    $"{autoPlaceholder.ToString().ToLower()}," +
