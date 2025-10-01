@@ -127,7 +127,7 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
             var cssFiles = base.RequiredCssFiles(field).ToList();
 
             cssFiles.Add($"{Constants.PluginCssRoot}/intlTelInput.min.css");
-            cssFiles.Add($"{Constants.PluginCssRoot}/our.umbraco.forms.intl-tel-input.css");
+            cssFiles.Add($"{Constants.PluginCssRoot}/umbraco.community.forms.intl-tel-input.css");
 
             return cssFiles;
         }
@@ -137,7 +137,7 @@ namespace Umbraco.Community.Forms.Intl_Tel_Input.FieldTypes
             var javascriptFiles = base.RequiredJavascriptFiles(field).ToList();
 
             javascriptFiles.Add($"{Constants.PluginScriptRoot}/intlTelInput.min.js");
-            javascriptFiles.Add($"{Constants.PluginScriptRoot}/our.umbraco.forms.intl-tel-input.js");
+            javascriptFiles.Add($"{Constants.PluginScriptRoot}/umbraco.community.forms.intl-tel-input.js");
 
             if (field.Settings.ContainsKey("IPBasedCountry") && field.Settings["IPBasedCountry"] == "True"
                 || field.Settings.ContainsKey("AutoPlaceholder") && field.Settings["AutoPlaceholder"] == "True")
